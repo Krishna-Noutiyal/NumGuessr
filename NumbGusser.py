@@ -8,6 +8,7 @@ import random as ran
 print("\nHey Welcome to NumGuessr\n")
 print("You dared to challange me\n")
 print("Now tell what number I am thinking of\n")
+print("\t\tThe number is in between 1 to 100\n")
 
 # Number you have to guess
 num = ran.randint(1,100)
