@@ -12,9 +12,12 @@ print("\t\tThe number is in between 1 to 100\n")
 
 # Number you have to guess
 num = ran.randint(1,100)
+# To find the randomly genrated num
+# print(num)
 # i for number of chances left
 i = 7
 while (i>0):
+
     # Subtracting 1 from i to lower the chances left till it reaches 0
     i = i-1
     # Number entered by user
@@ -42,14 +45,14 @@ while (i>0):
         the number guessd by him is less or more then the real number
         """
         # If number entered is Greater then the num
-        if num < inp  > num+10 and i!=0:
+        if num < inp  >= num+10 and i!=0:
             print("\t\t\t",inp, "Is much Greater then my number\n")
              
             # Showing user how much chances left though recently assined value of i
             print("\t\t\t\t Now you only have", i,"chances left\n" )
 
         # If number entered is a little Greater then the num
-        elif num < inp  < num+10 and i!=0:
+        elif num < inp  <= num+10 and i!=0:
             print("\t\t\t",inp, " Is just a little Greater then my number\n")
              
             # Showing user how much chances left though recently assined value of i
@@ -58,14 +61,14 @@ while (i>0):
 
 
         # If number entered is Smaller then the num
-        elif num > inp  < num-10 and i!=0:            
+        elif num > inp  <= num-10 and i!=0:            
             print("\t\t\t", inp, "Is very Smaller then my number\n")
 
             #S howing user how much chances left though recently assined value of i
             print("\t\t\t\tNow you only have", i,"chances left\n" )
 
         # If number entered is just a little Smaller then the num
-        elif num > inp  > num-10 and i!=0:            
+        elif num > inp  >= num-10 and i!=0:            
             print("\t\t\t", inp, "Is just a little Smaller then my number\n")
 
             #S howing user how much chances left though recently assined value of i
@@ -88,6 +91,7 @@ while (i>0):
             # If else statment to continue or close the program as per user input
             if a =="Y":
                 i = 7
+                num = ran.randint(1,100)
                 continue
             else:
                 # Asking for feedback
@@ -116,6 +120,7 @@ while (i>0):
             # If else statment to continue or close the program as per user input
             if a =="Y":
                 i = 7
+                num = ran.randint(1,100)
                 continue
             else:
                 # Asking for feedback
