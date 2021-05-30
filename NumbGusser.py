@@ -13,7 +13,7 @@ print("\t\tThe number is in between 1 to 100\n")
 # Number you have to guess
 num = ran.randint(1,100)
 # To find the randomly genrated num
-# print(num)
+print(num)
 # i for number of chances left
 i = 7
 while (i>0):
@@ -44,41 +44,23 @@ while (i>0):
         if else statment again to tell user if 
         the number guessd by him is less or more then the real number
         """
+        
         # If number entered is Greater then the num
-        if num < inp  >= num+10 and i!=0:
+        if num < inp  >= num+10 :
             print("\t\t\t",inp, "Is much Greater then my number\n")
              
             # Showing user how much chances left though recently assined value of i
             print("\t\t\t\t Now you only have", i,"chances left\n" )
 
-        # If number entered is a little Greater then the num
-        elif num < inp  <= num+10 and i!=0:
-            print("\t\t\t",inp, " Is just a little Greater then my number\n")
-             
-            # Showing user how much chances left though recently assined value of i
-            print("\t\t\t\t Now you only have", i,"chances left\n" )
 
 
 
-        # If number entered is Smaller then the num
-        elif num > inp  <= num-10 and i!=0:            
-            print("\t\t\t", inp, "Is very Smaller then my number\n")
 
-            #S howing user how much chances left though recently assined value of i
-            print("\t\t\t\tNow you only have", i,"chances left\n" )
-
-        # If number entered is just a little Smaller then the num
-        elif num > inp  >= num-10 and i!=0:            
-            print("\t\t\t", inp, "Is just a little Smaller then my number\n")
-
-            #S howing user how much chances left though recently assined value of i
-            print("\t\t\t\tNow you only have", i,"chances left\n" )
-
-        elif i==0:
-
-            print("\t\t\tSorry to say but you lost the game !!!\n")
-            print("\t\t\tMy number was", num,"\n")
-
+        # if player loose
+        elif num != inp and i == 0:
+            
+            print("\t\t\tSorry to say but you lost the game\n")
+            print("\t\t\tMy number was", num)
             # Asking user to continue or close the program
             again = input("\t\t\t\tpress Y to guess again or press enter to close: ")
             
@@ -92,6 +74,8 @@ while (i>0):
             if a =="Y":
                 i = 7
                 num = ran.randint(1,100)
+                print("\n\nNow tell what number I am thinking of\n")
+                print("\tThe number is in between 1 to 100\n")
                 continue
             else:
                 # Asking for feedback
@@ -103,8 +87,42 @@ while (i>0):
                 z= input("Enter to exit : ")
                 break
 
+
+
+
+        # If number entered is a little Greater then the num
+        elif num < inp  <= num+10 :
+            print("\t\t\t",inp, " Is just a little Greater then my number\n")
+             
+            # Showing user how much chances left though recently assined value of i
+            print("\t\t\t\t Now you only have", i,"chances left\n" )
+
+
+
+
+        # If number entered is Smaller then the num
+        elif num > inp  <= num-10 :            
+            print("\t\t\t", inp, "Is very Smaller then my number\n")
+
+            # Showing user how much chances left though recently assined value of i
+            print("\t\t\t\tNow you only have", i,"chances left\n" )
+
+
+
+
+
+        # If number entered is just a little Smaller then the num
+        elif num > inp  >= num-10 :            
+            print("\t\t\t", inp, "Is just a little Smaller then my number\n")
+
+            # Showing user how much chances left though recently assined value of i
+            print("\t\t\t\tNow you only have", i,"chances left\n" )
+
+
+        
+
         # If user guesses the right value of num
-        elif num == inp and i!=0:
+        elif num == inp:
             
             print("\t\t\tKamal Kar diya bhi sahi javab, mera number", num, "tha apne bilkul sahi guess kiya\n")
             print("\t\t\tYou won the game after",7-i, "tries")
@@ -121,6 +139,8 @@ while (i>0):
             if a =="Y":
                 i = 7
                 num = ran.randint(1,100)
+                print("\n\nNow tell what number I am thinking of\n")
+                print("\tThe number is in between 1 to 100\n")
                 continue
             else:
                 # Asking for feedback
@@ -131,6 +151,9 @@ while (i>0):
                 
                 z= input("Enter to exit : ")
                 break
+
+
+        
 
     
 
